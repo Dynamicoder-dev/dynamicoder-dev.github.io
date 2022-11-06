@@ -24,7 +24,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '4086523203';
+    var serviceWorkerVersion = '271027448';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -86,6 +86,29 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGgAsUf3aNCSe5H7D4NfJRCDPagUHaies",
+      authDomain: "real-estate-app-dynamicoder.firebaseapp.com",
+      projectId: "real-estate-app-dynamicoder",
+      storageBucket: "real-estate-app-dynamicoder.appspot.com",
+      messagingSenderId: "472570964144",
+      appId: "1:472570964144:web:558a1aca04fe25bb63f375",
+      measurementId: "G-NCGW5F8QCE"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
